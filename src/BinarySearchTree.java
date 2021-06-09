@@ -5,8 +5,9 @@ public class BinarySearchTree {
 
 	Node root;
 
-	public static BinarySearchTree createBinaryTree() {
-		BinarySearchTree bt = new BinarySearchTree();
+	public BinarySearchTree createBinaryTree() {
+		
+	    BinarySearchTree bt = new BinarySearchTree();
 
 		bt.add(193);
 		bt.add(215);
@@ -14,7 +15,7 @@ public class BinarySearchTree {
 		bt.add(9);
 		bt.add(73);
 		bt.add(180);
-
+	
 		return bt;
 	}
 
@@ -41,15 +42,15 @@ public class BinarySearchTree {
 	// Print value of the root
 	// Visit right node
 
-	public static void printNodes(Node current) {
-
-
+	public void printNodes(Node current) {
+			
+		
 		if(current == null){
 			return;
 		}
 
 		printNodes(current.left); // Keeps going to the left most node -- deeper and deepest
-		System.out.println(current.value); // Print as soon as the next one gives null (base case - recursion reaches a sort of breakthroguh)
+		System.out.println(current.value); // Print as soon as the next one gives null (base case - recursion reaches a sort of breakthrough)
 		printNodes(current.right); // Next do the same with right nodes (right subtree) -- mind that the subtree starts from deepest (i.e after deepest left node is found and printed)
 
 	}
